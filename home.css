@@ -632,3 +632,23 @@ section {
     background: #e2f2e8;
     color: #278052;
 }
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 5%;
+        min-height: 60px;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .menu-toggle {
+        padding: 4px 8px;
+        font-size: 1.15rem;
+    }
+
+}
