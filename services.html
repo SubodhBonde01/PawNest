@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PawNest | Our Services</title>
+
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="home.html" class="logo">
+            🐾 PawNest
+        </a>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="adoption.html">Adoption</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms &amp; Conditions</a>
+        </nav>
+
+    </header>
+
+
+    <!-- SERVICES HERO -->
+
+    <main>
+
+        <section class="services-hero">
+
+            <p class="section-label">OUR SERVICES</p>
+
+            <h1>
+                Thoughtful care for
+                <span>every companion.</span>
+            </h1>
+
+            <p>
+                PawNest offers a collection of concept services and
+                helpful resources designed to support pet parents,
+                animal lovers, and responsible adoption communities.
+            </p>
+
+        </section>
+
+
+        <!-- MAIN SERVICES -->
+
+        <section class="section services-content">
+
+            <p class="section-label">WHAT WE OFFER</p>
+
+            <h2>Support for every stage of pet care.</h2>
+
+            <div class="card-grid">
+
+                <article class="service-card">
+
+                    <div class="card-icon">🩺</div>
+
+                    <h3>Pet Health Awareness</h3>
+
+                    <p>
+                        Learn about everyday pet wellness, basic
+                        preventive care, healthy habits, and the
+                        importance of consulting qualified veterinarians.
+                    </p>
+
+                    <button class="learn-more-btn" data-service="health">
+    Learn More →
+</button>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="card-icon">✂️</div>
+
+                    <h3>Grooming Guidance</h3>
+
+                    <p>
+                        Explore simple grooming routines, hygiene
+                        practices, coat care, and comfort-focused
+                        grooming suggestions for pets.
+                    </p>
+
+                    <button class="learn-more-btn" data-service="grooming">
+    Learn More →
+</button>
+
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="card-icon">🏡</div>
+
+                    <h3>Adoption Support</h3>
+
+                    <p>
+                        Discover the importance of responsible adoption,
+                        suitable pet matching, preparation, and
+                        long-term commitment.
+                    </p>
+
+                    <button class="learn-more-btn" data-service="adoption">
+    Learn More →
+</button>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="card-icon">🍖</div>
+
+                    <h3>Nutrition Awareness</h3>
+
+                    <p>
+                        Understand why balanced nutrition, clean water,
+                        appropriate portions, and professional advice
+                        are important for pet well-being.
+                    </p>
+
+                    <button class="learn-more-btn" data-service="nutrition">
+    Learn More →
+</button>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="card-icon">🐾</div>
+
+                    <h3>Pet Safety</h3>
+
+                    <p>
+                        Learn about safe surroundings, identification,
+                        supervision, and responsible handling of pets
+                        at home and outdoors.
+                    </p>
+
+                    <button class="learn-more-btn" data-service="safety">
+    Learn More →
+</button>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="card-icon">🤝</div>
+
+                    <h3>Community Awareness</h3>
+
+                    <p>
+                        Encourage kindness toward animals and promote
+                        awareness of animal welfare within local
+                        communities.
+                    </p>
+
+                    <button class="learn-more-btn" data-service="community">
+    Learn More →
+</button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- DETAILED SERVICE INFORMATION -->
+
+
+        <!-- CALL TO ACTION -->
+
+        <section class="section contact-section">
+
+            <p class="section-label">READY TO GET INVOLVED?</p>
+
+            <h2>Every act of care matters.</h2>
+
+            <p>
+                Explore pet adoption, learn more about animal welfare,
+                or connect with the PawNest community.
+            </p>
+
+            <a href="contact.html" class="primary-button">
+                Contact PawNest
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 PawNest. All rights reserved.
+        </p>
+
+    </footer>
+
+<!-- SERVICE DETAILS POPUP -->
+
+<div class="service-modal" id="serviceModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" id="closeModal">
+            ×
+        </button>
+
+        <p class="section-label">SERVICE DETAILS</p>
+
+        <h2 id="modalTitle">
+            Pet Health Awareness
+        </h2>
+
+        <p id="modalDescription">
+            Detailed information will appear here.
+        </p>
+
+        <div class="modal-points" id="modalPoints">
+            <!-- Detailed points appear here -->
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    const serviceModal = document.getElementById("serviceModal");
+    const closeModal = document.getElementById("closeModal");
+
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDescription = document.getElementById("modalDescription");
+    const modalPoints = document.getElementById("modalPoints");
+
+    const serviceDetails = {
+
+        health: {
+            title: "Pet Health Awareness",
+            description:
+                "Learn how to support your pet’s everyday health through observation, preventive care, and responsible veterinary guidance.",
+            points: [
+                "Observe changes in appetite, behavior, energy, or movement.",
+                "Schedule regular veterinary checkups and vaccinations.",
+                "Maintain hygiene and provide clean drinking water.",
+                "Seek professional veterinary advice when health concerns appear."
+            ]
+        },
+
+        grooming: {
+            title: "Grooming Guidance",
+            description:
+                "Grooming helps pets stay clean, comfortable, and healthy. The right routine depends on the pet’s breed, coat, age, and individual needs.",
+            points: [
+                "Brush the coat according to the pet’s coat type.",
+                "Keep nails trimmed safely and regularly.",
+                "Check ears, eyes, paws, and skin for unusual changes.",
+                "Use pet-safe grooming products and gentle handling."
+            ]
+        },
+
+        adoption: {
+            title: "Adoption Support",
+            description:
+                "Responsible adoption means choosing a pet carefully and preparing to provide safety, care, patience, and lifelong commitment.",
+            points: [
+                "Understand the pet’s needs, age, behavior, and energy level.",
+                "Prepare a safe and comfortable home environment.",
+                "Plan for food, healthcare, exercise, and daily care.",
+                "Treat adoption as a long-term responsibility."
+            ]
+        },
+
+        nutrition: {
+            title: "Nutrition Awareness",
+            description:
+                "Proper nutrition supports a pet’s growth, energy, immunity, and overall well-being.",
+            points: [
+                "Provide food suitable for the pet’s age and needs.",
+                "Keep clean drinking water available.",
+                "Avoid feeding unsafe human foods without professional guidance.",
+                "Consult a veterinarian about special dietary requirements."
+            ]
+        },
+
+        safety: {
+            title: "Pet Safety",
+            description:
+                "A safe environment helps reduce accidents, injuries, and preventable risks for pets at home and outdoors.",
+            points: [
+                "Keep harmful chemicals, medicines, and unsafe objects away.",
+                "Use secure collars, identification, or other suitable safety measures.",
+                "Supervise pets around roads, unfamiliar animals, and outdoor spaces.",
+                "Provide a calm and secure resting area."
+            ]
+        },
+
+        community: {
+            title: "Community Awareness",
+            description:
+                "Small acts of kindness can help create a more respectful and caring environment for animals within local communities.",
+            points: [
+                "Promote kindness and respectful treatment of animals.",
+                "Share reliable information about responsible pet ownership.",
+                "Encourage adoption and discourage abandonment.",
+                "Support animal welfare awareness in your community."
+            ]
+        }
+
+    };
+
+
+    const serviceButtons = document.querySelectorAll(".learn-more-btn");
+
+
+    serviceButtons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            const selectedService = button.getAttribute("data-service");
+            const service = serviceDetails[selectedService];
+
+            modalTitle.textContent = service.title;
+            modalDescription.textContent = service.description;
+
+            modalPoints.innerHTML = "";
+
+            service.points.forEach(function(point) {
+
+                const pointElement = document.createElement("div");
+
+                pointElement.className = "modal-point";
+                pointElement.textContent = point;
+
+                modalPoints.appendChild(pointElement);
+
+            });
+
+            serviceModal.classList.add("active");
+
+        });
+
+    });
+
+
+    closeModal.addEventListener("click", function() {
+
+        serviceModal.classList.remove("active");
+
+    });
+
+
+    serviceModal.addEventListener("click", function(event) {
+
+        if (event.target === serviceModal) {
+            serviceModal.classList.remove("active");
+        }
+
+    });
+
+
+    document.addEventListener("keydown", function(event) {
+
+        if (event.key === "Escape") {
+            serviceModal.classList.remove("active");
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

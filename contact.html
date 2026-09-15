@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PawNest | Contact Us</title>
+
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="home.html" class="logo">
+            🐾 PawNest
+        </a>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="adoption.html">Adoption</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms &amp; Conditions</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTACT HERO -->
+
+    <main>
+
+        <section class="contact-hero">
+
+            <p class="section-label">GET IN TOUCH</p>
+
+            <h1>
+                Let’s make the world
+                <span>kinder for animals.</span>
+            </h1>
+
+            <p>
+                Have a question, suggestion, or want to learn more
+                about responsible pet care and adoption?
+                We would love to hear from you.
+            </p>
+
+        </section>
+
+
+        <!-- CONTACT CONTENT -->
+
+        <section class="contact-content">
+
+            <div class="contact-info">
+
+                <p class="section-label">CONTACT INFORMATION</p>
+
+                <h2>We’re here to listen.</h2>
+
+                <p>
+                    Connect with PawNest to explore pet care resources,
+                    adoption awareness, and animal welfare initiatives.
+                </p>
+
+
+                <div class="info-card">
+
+                    <span class="info-icon">📧</span>
+
+                    <div>
+                        <h3>Email Us</h3>
+                        <p>hello@pawnest.example</p>
+                    </div>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-icon">📞</span>
+
+                    <div>
+                        <h3>Call Us</h3>
+                        <p>+91 00000 00000</p>
+                    </div>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-icon">📍</span>
+
+                    <div>
+                        <h3>Our Location</h3>
+                        <p>Pune, Maharashtra, India</p>
+                    </div>
+
+                </div>
+
+
+                <div class="social-links">
+
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form-box">
+
+                <p class="section-label">SEND A MESSAGE</p>
+
+                <h2>How can we help?</h2>
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+
+                        <label for="name">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">Subject</label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Enter message subject"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">Your Message</label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Write your message..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="submit-button">
+                        Send Message →
+                    </button>
+
+                    <p id="formMessage" class="form-message"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ SECTION -->
+
+        <section class="contact-faq">
+
+            <p class="section-label">COMMON QUESTIONS</p>
+
+            <h2>Before you reach out.</h2>
+
+            <div class="faq-grid">
+
+                <article class="faq-card">
+
+                    <h3>Can I adopt a pet through PawNest?</h3>
+
+                    <p>
+                        PawNest is a concept awareness website.
+                        Please contact a verified local shelter or
+                        animal welfare organization for actual adoption.
+                    </p>
+
+                </article>
+
+
+                <article class="faq-card">
+
+                    <h3>Can I ask about pet care?</h3>
+
+                    <p>
+                        Yes. You can use the message form to share
+                        general questions about responsible pet care
+                        and animal welfare awareness.
+                    </p>
+
+                </article>
+
+
+                <article class="faq-card">
+
+                    <h3>Is the contact form connected?</h3>
+
+                    <p>
+                        The form demonstrates website structure.
+                        A real message-delivery system would require
+                        a backend or form service.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 PawNest. Created using AI website-generation tools.
+        </p>
+
+    </footer>
+
+
+    <!-- DEMO FORM SCRIPT -->
+
+<script>
+
+    const contactForm = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        formMessage.textContent =
+            "⚠️ This is an educational project. The contact form is not connected to a real submission service.";
+
+        formMessage.style.color = "#c47a18";
+
+        contactForm.reset();
+
+    });
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PawNest | Pet Care & Adoption</title>
+
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="home.html" class="logo">
+            🐾 PawNest
+        </a>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="adoption.html">Adoption</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms & Conditions</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">WELCOME TO PAWNEST</p>
+
+                <h1>
+                    Every pet deserves
+                    <span>a loving home.</span>
+                </h1>
+
+                <p>
+                    We connect pets with caring families and provide
+                    reliable services to help every animal live a
+                    happier, healthier life.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="adoption.html" class="primary-button">
+                        Find a Pet
+                    </a>
+
+                    <a href="services.html" class="secondary-button">
+                        Explore Services
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+                
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+
+        <section class="section" id="about">
+
+            <p class="section-label">ABOUT US</p>
+
+            <h2>Care, compassion, and companionship.</h2>
+
+            <p>
+                PawNest is a concept pet-care platform designed to
+                support animal lovers, pet parents, and adoption
+                communities through accessible and caring services.
+            </p>
+
+        </section>
+
+
+        <!-- SERVICES SECTION -->
+
+        <section class="section" id="services">
+
+            <p class="section-label">OUR SERVICES</p>
+
+            <h2>Everything your pet needs.</h2>
+
+            <div class="card-grid">
+
+                <article class="service-card">
+                    <div class="card-icon">🩺</div>
+                    <h3>Pet Health</h3>
+                    <p>
+                        Helpful resources and support for your pet’s
+                        everyday health and well-being.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="card-icon">✂️</div>
+                    <h3>Grooming</h3>
+                    <p>
+                        Discover grooming guidance to keep pets
+                        clean, comfortable, and happy.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="card-icon">🏡</div>
+                    <h3>Pet Adoption</h3>
+                    <p>
+                        Helping loving families discover pets that
+                        need a safe and caring home.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ADOPTION SECTION -->
+
+        <section class="section adoption-section" id="adoption">
+
+            <p class="section-label">ADOPTION</p>
+
+            <h2>Meet your future companion.</h2>
+
+            <div class="card-grid">
+
+                <article class="pet-card">
+                    <div class="pet-image">🐕</div>
+                    <h3>Bruno</h3>
+                    <p>Friendly and playful</p>
+                    <a href="contact.html">Enquire Now →</a>
+                </article>
+
+                <article class="pet-card">
+                    <div class="pet-image">🐈</div>
+                    <h3>Luna</h3>
+                    <p>Calm and affectionate</p>
+                    <a href="contact.html">Enquire Now →</a>
+                </article>
+
+                <article class="pet-card">
+                    <div class="pet-image">🐕‍🦺</div>
+                    <h3>Rocky</h3>
+                    <p>Energetic and loyal</p>
+                    <a href="contact.html">Enquire Now →</a>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY CHOOSE US -->
+
+        <section class="section">
+
+            <p class="section-label">WHY PAWNEST?</p>
+
+            <h2>Small acts of care create big changes.</h2>
+
+            <div class="feature-list">
+
+                <p>✓ Compassionate approach</p>
+                <p>✓ Pet-friendly guidance</p>
+                <p>✓ Focus on responsible adoption</p>
+                <p>✓ Community-centered vision</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+
+        <section class="section contact-section" id="contact">
+
+            <p class="section-label">GET IN TOUCH</p>
+
+            <h2>Let’s make a difference together.</h2>
+
+            <p>
+                Interested in pet adoption or learning more about
+                PawNest? We would love to hear from you.
+            </p>
+
+            <a href="contact.html" class="primary-button">
+                Contact PawNest
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>© 2026 PawNest. All rights reserved.</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+<div class="education-popup" id="educationPopup">
+    <div class="education-popup-content">
+
+        <button class="close-popup" id="closePopup">×</button>
+
+        <div class="popup-icon">ⓘ</div>
+
+        <h2>Educational Purpose Only</h2>
+
+        <p>
+            This website is developed for educational and demonstration
+            purposes only. It is not an official animal adoption or
+            veterinary service.
+        </p>
+
+        <button class="popup-button" id="understandButton">
+            I Understand
+        </button>
+
+    </div>
+</div>
+
+<script>
+    const educationPopup = document.getElementById("educationPopup");
+    const closePopup = document.getElementById("closePopup");
+    const understandButton = document.getElementById("understandButton");
+
+    function hideEducationPopup() {
+        educationPopup.style.display = "none";
+    }
+
+    closePopup.addEventListener("click", hideEducationPopup);
+    understandButton.addEventListener("click", hideEducationPopup);
+</script>
+
+</body>
+</html>

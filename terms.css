@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7fbf8;
+    color: #20352b;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 7%;
+    background: #ffffff;
+    border-bottom: 1px solid #e1ebe4;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #1d6744;
+    font-size: 1.55rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: #52665a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #278052;
+}
+
+/* =========================
+   COMMON STYLES
+========================= */
+
+.section-label {
+    margin-bottom: 14px;
+    color: #278052;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* =========================
+   TERMS HERO
+========================= */
+
+.terms-hero {
+    padding: 100px 7% 90px;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(179, 225, 196, 0.35),
+            transparent 30%
+        ),
+        linear-gradient(135deg, #e4f4e9, #f7fbf8);
+}
+
+.terms-hero h1 {
+    max-width: 800px;
+    margin: 0 auto 22px;
+    color: #173d2a;
+    font-size: clamp(2.5rem, 5vw, 4.6rem);
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.terms-hero h1 span {
+    display: block;
+    color: #278052;
+}
+
+.terms-hero > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #68786f;
+    font-size: 1rem;
+}
+
+/* =========================
+   TERMS CONTENT
+========================= */
+
+.terms-content {
+    width: 86%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.last-updated {
+    margin-bottom: 28px;
+    color: #718077;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: right;
+}
+
+/* =========================
+   TERMS CARDS
+========================= */
+
+.terms-card {
+    margin-bottom: 24px;
+    padding: 32px 36px;
+    background: #ffffff;
+    border: 1px solid #deebe3;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(34, 83, 53, 0.05);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.terms-card:hover {
+    transform: translateY(-4px);
+    border-color: #c4dfce;
+    box-shadow: 0 15px 35px rgba(34, 83, 53, 0.09);
+}
+
+.terms-card h2 {
+    margin-bottom: 14px;
+    color: #173d2a;
+    font-size: 1.45rem;
+    line-height: 1.3;
+}
+
+.terms-card p {
+    margin-bottom: 14px;
+    color: #68786f;
+    font-size: 0.98rem;
+}
+
+.terms-card p:last-child {
+    margin-bottom: 0;
+}
+
+.terms-card ul {
+    margin-top: 12px;
+    padding-left: 22px;
+    color: #68786f;
+}
+
+.terms-card li {
+    margin-bottom: 8px;
+}
+
+.terms-card li:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================
+   CONTACT BUTTON
+========================= */
+
+.terms-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 13px 23px;
+    background: #278052;
+    color: #ffffff;
+    border-radius: 30px;
+    font-weight: 800;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.terms-button:hover {
+    background: #185b38;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(39, 128, 82, 0.2);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 30px 7%;
+    background: #173d2a;
+    color: #dcebe1;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.88rem;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .terms-content {
+        width: 90%;
+    }
+
+    .terms-card {
+        padding: 28px;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 5%;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .navbar nav a {
+        font-size: 0.82rem;
+    }
+
+    .terms-hero {
+        padding: 70px 6%;
+    }
+
+    .terms-hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .terms-hero > p:last-child {
+        font-size: 0.92rem;
+    }
+
+    .terms-content {
+        width: 88%;
+        padding: 60px 0;
+    }
+
+    .last-updated {
+        text-align: left;
+    }
+
+    .terms-card {
+        padding: 24px 20px;
+        border-radius: 18px;
+    }
+
+    .terms-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .terms-card p,
+    .terms-card li {
+        font-size: 0.93rem;
+    }
+
+    .terms-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer {
+        padding: 25px 5%;
+    }
+}
