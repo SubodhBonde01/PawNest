@@ -14,22 +14,28 @@
 
     <!-- NAVBAR -->
 
-    <header class="navbar">
+<header class="navbar">
 
-        <a href="index.html" class="logo">
-            🐾 PawNest
-        </a>
+    <a href="home.html" class="logo">
+        🐾 PawNest
+    </a>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="adoption.html">Adoption</a>
-            <a href="contact.html">Contact</a>
-            <a href="terms.html">Terms &amp; Conditions</a>
-        </nav>
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+        ☰
+    </button>
 
-    </header>
+    <nav id="navMenu">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="adoption.html">Adoption</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms & Conditions</a>
+    </nav>
+
+</header>
 
 
     <!-- CONTACT HERO -->
@@ -279,6 +285,40 @@
         formMessage.style.color = "#c47a18";
 
         contactForm.reset();
+
+    });
+
+</script>
+
+<script>
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", function () {
+
+        navMenu.classList.toggle("show");
+
+        const isOpen = navMenu.classList.contains("show");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+
+    });
+
+    // Close the menu after selecting a page
+
+    navMenu.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+            navMenu.classList.remove("show");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+        });
 
     });
 
