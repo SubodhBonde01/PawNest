@@ -10,24 +10,27 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
+   <!-- NAVBAR -->
 
 <header class="navbar">
 
     <a href="index.html" class="logo">
-        <span class="logo-paw">🐾</span>
-        <span>PawNest</span>
+        🐾 PawNest
     </a>
 
-    <nav class="nav-links">
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+        ☰
+    </button>
 
-        <a href="index.html" class="active">Home</a>
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="adoption.html">Adoption</a>
         <a href="contact.html">Contact</a>
         <a href="terms.html">Terms & Conditions</a>
-
     </nav>
 
 </header>
@@ -252,6 +255,40 @@
 
     closePopup.addEventListener("click", hideEducationPopup);
     understandButton.addEventListener("click", hideEducationPopup);
+</script>
+
+<script>
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", function () {
+
+        navMenu.classList.toggle("show");
+
+        const isOpen = navMenu.classList.contains("show");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+
+    });
+
+    // Close the menu after selecting a page
+
+    navMenu.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+            navMenu.classList.remove("show");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+        });
+
+    });
+
 </script>
 
 </body>

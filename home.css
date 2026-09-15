@@ -526,7 +526,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 22px 7%;
+    padding: 14px 5%;
     background: #ffffff;
     border-bottom: 1px solid #e1ebe4;
     position: sticky;
@@ -536,7 +536,7 @@ section {
 
 .logo {
     color: #1d6744;
-    font-size: 1.55rem;
+    font-size: 1.35rem;
     font-weight: 800;
     white-space: nowrap;
 }
@@ -557,4 +557,78 @@ section {
 .navbar nav a:hover,
 .navbar nav a:focus {
     color: #238052;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    background: #ffffff;
+    border-bottom: 1px solid #e1ebe4;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 60px;
+}
+
+.logo {
+    color: #1d6744;
+    font-size: 1.25rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* MENU BUTTON */
+
+.menu-toggle {
+    display: block;
+    padding: 4px 8px;
+    background: #e2f2e8;
+    color: #1d6744;
+    border: 1px solid #c4dfce;
+    border-radius: 10px;
+    font-size: 1.15rem;
+    cursor: pointer;
+}
+
+/* NAVIGATION MENU */
+
+.navbar nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    flex-direction: column;
+    gap: 0;
+    min-width: 220px;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #deebe3;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(34, 83, 53, 0.12);
+}
+
+/* SHOW MENU ONLY AFTER CLICK */
+
+.navbar nav.show {
+    display: flex;
+}
+
+.navbar nav a {
+    padding: 12px 16px;
+    color: #52665a;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    background: #e2f2e8;
+    color: #278052;
 }
